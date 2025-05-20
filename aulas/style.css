@@ -26,6 +26,16 @@ footer {
   color: #777;
 }
 
+/*formatacao generica dos links*/
+a {
+  text-decoration: none; /*retirar o sublinhado dos links*/
+  color: #492291; /*alterar a cor dos links*/
+}
+
+a:hover {
+  text-decoration: underline; /*colta o sublinhado quando passar o mouse em cima*/
+}
+
 /*formatação da home*/
 
 main {
@@ -70,7 +80,7 @@ h2 {
     flex-grow: 1; /*permitir aumentar o tamanho*/
     flex-shrink: 1; /*permitir reduzir o tamanho*/
   }
-  a{
+  a {
     text-decoration: none;
     color: #000;
   }
@@ -134,5 +144,38 @@ h2 {
   }
   a:nth-child(5) {
     background-color: #000;
+  }
+}
+
+/*link voltar no rodape das paginas*/
+.voltar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*formatação do grid de clínica*/
+.grid-clinica {
+  display: flex; /*opção por layout em grid. O padrão para o display é block*/
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-start;
+
+  div {
+    flex-grow: 1; /*permite expandir a largura*/
+    flex-shrink: 1; /*permite reduzir a largura*/
+    flex-basis: 300px;
+  }
+
+  img {
+    width: 100%; /*imagem responsiva*/
+  }
+
+  h2 {
+    text-align: start;
+    margin-bottom: 15px;
+  }
+  p {
+    line-height: 150%; /*altura da linha*/
+    margin-bottom: 15px; /*margem inferior*/
   }
 }
