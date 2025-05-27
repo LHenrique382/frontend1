@@ -231,6 +231,23 @@ h2 {
     padding-left: 20px;
     list-style: square;
   }
+
+}
+
+.grid-especialidade {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+gap: 100px;
+
+*{
+  flex-basis: 19%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
 }
 
 /*Formatação das tabelas*/
