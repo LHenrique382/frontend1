@@ -93,7 +93,7 @@ h2 {
 
 	/* espaçamento entre os elementos */
 	* {
-		flex-basis: 19%;
+		flex-basis: 250px;
 		/* tamanho inicial para o elemento filho */
 		flex-grow: 1;
 		/* permitir aumentar o tamanho */
@@ -205,6 +205,7 @@ h2 {
 
 /* Formatação do grid de clínica */
 .grid-clinica {
+<<<<<<< HEAD
 	display: flex; /* opção por layout em grid (grade). O padrão para o display é block */
 	justify-content: space-between; /* alinha pelas margens externas (direita e esquerda) */
 	gap: 1.5rem;
@@ -231,6 +232,51 @@ h2 {
 		padding-left: 20px;
 		list-style: square;
 	}
+=======
+  display: flex; /* opção por layout em grid (grade). O padrão para o display é block */
+  justify-content: space-between; /* alinha pelas margens externas (direita e esquerda) */
+  gap: 1.5rem;
+  align-items: flex-start;
+  div {
+    flex-grow: 1; /* permite expandir a largura */
+    flex-shrink: 1; /* permite reduzir a largura */
+    flex-basis: 300px; /* tamanho inicial */
+  }
+  img {
+    width: 100%; /* imagem responsiva */
+  }
+  h2 {
+    text-align: start; /* alinha à esquerda */
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+  p {
+    line-height: 150%; /* Altura da linha ou espaçamento entre linhas */
+    margin-bottom: 15px; /* Margem inferior */
+  }
+  ul,
+  ol {
+    padding-left: 20px;
+    list-style: square;
+  }
+
+}
+
+.grid-especialidade {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+gap: 100px;
+
+*{
+  flex-basis: 19%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+>>>>>>> 3785fb627992ad1b209040916fdbc8dcd752e893
 }
 
 /*Formatação das tabelas*/
@@ -313,5 +359,24 @@ th {
 		width: 70%;
 		/*height: 70%;*/
 		height: 60vh;
+	}
+}
+.grid-convenio {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 37px;
+
+	*{
+		flex-basis: 210px;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+
+}
+.icons{
+	font-size: 20px;
+	i{
+		font-size: 40px;
 	}
 }
