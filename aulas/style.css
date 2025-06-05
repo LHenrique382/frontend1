@@ -380,3 +380,64 @@ th {
 		font-size: 40px;
 	}
 }
+
+/*formatação do contato*/
+
+.contato {
+	display: flex;
+	justify-content: space-between;
+
+div{                      /*formatação para todas as divs do contato*/
+	flex-basis: 45%;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+}
+div:last-child {
+	iframe{
+		width: 100%;
+		height: 60vh;
+	}
+}
+
+
+label{
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: .9rem;
+	margin-top: 20px;
+	color:#555 ;
+}
+
+input[type=text], input[type=email], textarea{
+	padding: 10px;
+	width: 90%;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+}
+
+select{
+	padding: 8px;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+}
+
+input[type=checkbox]{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+input[type=submit]{
+	border-style: none; /*retirar a borda*/
+	background-color: #3b5998;
+	color: #fff;
+	padding: 10px 30px;
+	border-radius: 5px;
+	cursor: pointer;      /*mudar o cursor para a maozinha*/
+
+}
+
+input[type=submit]:hover{    /*quando passar o mouse no botão*/
+	background-color: #000;
+}
