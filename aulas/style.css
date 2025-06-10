@@ -144,6 +144,7 @@ h2 {
 
 .redes-sociais {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 15px;
 	margin-top: 10px;
@@ -205,7 +206,6 @@ h2 {
 
 /* Formatação do grid de clínica */
 .grid-clinica {
-<<<<<<< HEAD
 	display: flex; /* opção por layout em grid (grade). O padrão para o display é block */
 	justify-content: space-between; /* alinha pelas margens externas (direita e esquerda) */
 	gap: 1.5rem;
@@ -232,51 +232,21 @@ h2 {
 		padding-left: 20px;
 		list-style: square;
 	}
-=======
-  display: flex; /* opção por layout em grid (grade). O padrão para o display é block */
-  justify-content: space-between; /* alinha pelas margens externas (direita e esquerda) */
-  gap: 1.5rem;
-  align-items: flex-start;
-  div {
-    flex-grow: 1; /* permite expandir a largura */
-    flex-shrink: 1; /* permite reduzir a largura */
-    flex-basis: 300px; /* tamanho inicial */
-  }
-  img {
-    width: 100%; /* imagem responsiva */
-  }
-  h2 {
-    text-align: start; /* alinha à esquerda */
-    margin-bottom: 15px;
-    margin-top: 0px;
-  }
-  p {
-    line-height: 150%; /* Altura da linha ou espaçamento entre linhas */
-    margin-bottom: 15px; /* Margem inferior */
-  }
-  ul,
-  ol {
-    padding-left: 20px;
-    list-style: square;
-  }
-
 }
 
 .grid-especialidade {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-gap: 100px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 100px;
 
-*{
-  flex-basis: 19%;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
->>>>>>> 3785fb627992ad1b209040916fdbc8dcd752e893
+	* {
+		flex-basis: 19%;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
 }
 
 /*Formatação das tabelas*/
@@ -367,16 +337,15 @@ th {
 	flex-wrap: wrap;
 	gap: 37px;
 
-	*{
+	* {
 		flex-basis: 210px;
 		flex-grow: 1;
 		flex-shrink: 1;
 	}
-
 }
-.icons{
+.icons {
 	font-size: 20px;
-	i{
+	i {
 		font-size: 40px;
 	}
 }
@@ -387,57 +356,160 @@ th {
 	display: flex;
 	justify-content: space-between;
 
-div{                      /*formatação para todas as divs do contato*/
-	flex-basis: 45%;
-	flex-grow: 1;
-	flex-shrink: 1;
-}
-}
-div:last-child {
-	iframe{
-		width: 100%;
-		height: 60vh;
+	div {
+		/*formatação para todas as divs do contato*/
+		flex-basis: 45%;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+
+	div:last-child {
+		iframe {
+			width: 100%;
+			height: 60vh;
+		}
+	}
+
+	label {
+		display: block;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 0.9rem;
+		margin-top: 20px;
+		color: #555;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		padding: 10px;
+		width: 90%;
+		border: 1px solid #bbb;
+		border-radius: 5px;
+	}
+
+	select {
+		padding: 8px;
+		border: 1px solid #bbb;
+		border-radius: 5px;
+	}
+
+	input[type="checkbox"] {
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
+	input[type="submit"] {
+		border-style: none; /*retirar a borda*/
+		background-color: #3b5998;
+		color: #fff;
+		padding: 10px 30px;
+		border-radius: 5px;
+		cursor: pointer; /*mudar o cursor para a maozinha*/
+	}
+
+	input[type="submit"]:hover {
+		/*quando passar o mouse no botão*/
+		background-color: #000;
 	}
 }
 
+/*formatação do agendamento*/
 
-label{
-	display: block;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: .9rem;
-	margin-top: 20px;
-	color:#555 ;
+.agendamento {
+	margin: 0px auto; /*centralizar o container*/
+	width: 50%;
+	text-align: center; /*centrailzar o conteudo*/
+	label {
+		display: block; /*transformar em bloco para ficar separado do campo*/
+		text-transform: uppercase;
+		margin-top: 20px;
+		font-weight: bold;
+		font-size: 0.9rem;
+		color: #555;
+	}
 }
 
-input[type=text], input[type=email], textarea{
+.form-group {
+	display: flex; /*disposição lado a lado*/
+	justify-content: space-between; /*distribuição do conteudo*/
+}
+
+input[type="date"],
+input[type="time"],
+select {
 	padding: 10px;
-	width: 90%;
 	border: 1px solid #bbb;
 	border-radius: 5px;
 }
-
-select{
-	padding: 8px;
-	border: 1px solid #bbb;
-	border-radius: 5px;
+input[type="time"] {
+	padding: 7px;
 }
 
-input[type=checkbox]{
-	margin-top: 25px;
-	margin-bottom: 25px;
+input[type="text"] {
+	width: 80%;
+	margin-bottom: 30px;
 }
 
-input[type=submit]{
+input[type="submit"] {
 	border-style: none; /*retirar a borda*/
 	background-color: #3b5998;
 	color: #fff;
 	padding: 10px 30px;
 	border-radius: 5px;
-	cursor: pointer;      /*mudar o cursor para a maozinha*/
-
+	cursor: pointer; /*mudar o cursor para a maozinha*/
 }
 
-input[type=submit]:hover{    /*quando passar o mouse no botão*/
+input[type="submit"]:hover {
+	/*quando passar o mouse no botão*/
 	background-color: #000;
+}
+
+/*formatação para layout responsivo*/
+
+@media screen and (max-width: 800px) {
+	/*media queries*/
+	/* header {
+		background-color: green;
+	} */
+	main {
+		width: 100%;
+	}
+	.grid-home {
+		* {
+			flex-basis: 100%;
+		}
+	}
+	.grid-clinica,
+	.grid-especialidade,
+	.grid-convenio,
+	.form-group {
+		flex-direction: column; /*mudar a direção do empilhamento das tags*/
+		align-items: center;
+	}
+
+	.videos {
+		iframe {
+			width: 100%;
+			height: 35vh;
+		}
+		video {
+			width: 100%;
+		}
+	}
+	.agendamento {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	/* header {
+		background-color: red;
+	} */
+}
+
+@media screen and (max-width: 400px) {
+	/* header {
+		background-color: yellow;
+	} */
 }
