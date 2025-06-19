@@ -27,7 +27,7 @@ header {
   background-color: #ccdbd3;
   img {
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
     border-bottom: 30px solid whitesmoke;
   }
@@ -37,14 +37,14 @@ header {
   background-color: #ccdbd3;
   text-align: center;
   color: #000;
+  font-size: 1.5;
 }
 
 .grid-home {
   display: flex;
   flex-wrap: wrap;
-  margin: 55px;
-  gap: 30px;
-
+  margin: 40px;
+  gap: 40px;
 
   * {
     flex-basis: 300px;
@@ -61,17 +61,17 @@ header {
 .card {
   background-color: whitesmoke;
   border-radius: 12px;
-  box-shadow: 0 0 0 8px #111b52;
+  box-shadow: 0 0 0 2px #111b52;
   overflow: hidden;
   transition: transform 0.5s ease;
   padding-bottom: 8px;
   display: flex;
   flex-wrap: wrap;
-  margin: 30px;
+  margin: 1px;
 
   img {
     width: 100%;
-    height: 180px;
+    height: 300px;
     object-fit: cover;
   }
 }
@@ -180,6 +180,10 @@ h2 {
     width: 600px;
     border-radius: 20px;
   }
+  p{
+    line-height: 25px;
+    font-size: 15px;
+  }
 }
 
 .destaque-2 {
@@ -189,10 +193,15 @@ h2 {
   justify-content: space-between;
   gap: 1.5rem;
   font-size: 20px;
+  
 
   img {
     width: 700px;
     border-radius: 20px;
+  }
+  p{
+    line-height: 25px;
+    font-size: 15px;
   }
 }
 
@@ -273,18 +282,25 @@ h2 {
   border: 0;
 }
 
+/*formatação pontos turisticos*/
 
 .pontos-turisticos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 45px;
+
+  *{
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
 }
 
 /* Estilo dos cards */
 .card {
     
-    border-radius: 40px;
+    border-radius: 20px;
 }
 
 .card:hover {
@@ -294,8 +310,7 @@ h2 {
 /* Imagens */
 .card img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    object-fit:cover;
     border-bottom: 2px solid #111b52;
 }
 
@@ -310,15 +325,22 @@ h2 {
 .card p {
     padding: 15px 15px 15px;
     font-size: 1rem;
+    text-align: start;
 }
 
+/*formatação esportes*/
 
 .esportes {
+    width: 1200px;
     display: flex;
-    grid-template-columns:min-content;
-    gap: 20px;
-    padding: 40px 20px;
-    
+    flex-direction: column;
+    gap: 30px; 
+    height: 100%;
+    *{
+      flex-basis: 400px;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
 }
 
 /* Card */
@@ -338,6 +360,7 @@ h2 {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    
 }
 
 .card h2 {
@@ -347,53 +370,42 @@ h2 {
 }
 
 .card p {
-    padding: 0 15px 15px;
     font-size: 1rem;
 }
 
 iframe {
-    border: none;
-    display: block;
+    width: 100%;
 }
 
-/* Container dos cards */
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    justify-items: center;
-}
+
 
 /* Estilo dos cards */
-.card {
+.card-esporte {
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
+    border-radius: 15px;  
+    overflow:hidden;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 400px;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid #111b52;
 }
 
 /* Imagens dos cards */
 .card img {
     width: 100%;
-    height: 220px;
+    height: 300px;
     object-fit: cover;
 }
 
 /* Título dos cards */
 .card h2 {
-    background-color: #333;
+    background-color: #444;
     color: white;
-    padding: 15px;
-    font-size: 1.5rem;
+    padding: 5px;
+    font-size: 1rem;
 }
 
 /* Texto dos cards */
