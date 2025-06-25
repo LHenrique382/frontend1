@@ -45,7 +45,6 @@ header {
   margin: 55px;
   gap: 30px;
 
-
   * {
     flex-basis: 300px;
     flex-grow: 1;
@@ -61,7 +60,7 @@ header {
 .card {
   background-color: whitesmoke;
   border-radius: 12px;
-  box-shadow: 0 0 0 8px #111b52;
+  border: solid 3px #111b52;
   overflow: hidden;
   transition: transform 0.5s ease;
   padding-bottom: 8px;
@@ -239,26 +238,21 @@ h2 {
   color: #000;
 }
 
-.localizacao h1 {
-  text-align: center;
-  margin: 80px;
-  font-size: 2rem;
-  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);
-  background: linear-gradient(to right, #64b3f4, #c2e59c);
-}
+/*formatação dos mapas/localização*/
 
-/*formatação dos mapas*/
 .mapa-box {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: whitesmoke;
   margin-bottom: 40px;
   padding: 20px;
+  border-left: 3px solid #111b52;
+  border-radius: 10px;
 }
 
 .mapa-box h2 {
   margin-bottom: 15px;
-  color: #444;
+  color: #000;
+  text-align: center;
+  margin: 2px;
 }
 
 .mapa {
@@ -273,132 +267,119 @@ h2 {
   border: 0;
 }
 
-
 .pontos-turisticos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
 }
 
 /* Estilo dos cards */
 .card {
-    
-    border-radius: 40px;
+  border-radius: 40px;
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Imagens */
 .card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-bottom: 2px solid #111b52;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #111b52;
 }
 
 /* Títulos dos cards */
 .card h2 {
-    padding: 8px;
-    font-size: 1.2rem;
-    background-color: #ccdbd3;
+  padding: 5px;
+  font-size: 1.2rem;
+  background-color: #ccdbd3;
 }
 
 /* Textos dos cards */
 .card p {
-    padding: 15px 15px 15px;
-    font-size: 1rem;
+  padding: 15px 15px 15px;
+  font-size: 1rem;
 }
 
-
+/*formatação esportes*/
 .esportes {
-    display: flex;
-    grid-template-columns:min-content;
-    gap: 20px;
-    padding: 40px 20px;
-    
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-/* Card */
-.card {
-    background-color:whitesmoke;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, background-color 0.3s;
+.cardesportes {
+
+  background-color: whitesmoke;
+  border-left: 5px solid #111b52;
+  border-radius: 8px;
+  padding: 1.5rem;
+  h2{
+    margin-bottom: 20px;
+  }
+ 
 }
 
-.card:hover {
-    transform: scale(1.03);
-    background-color: #ffffff;
-}
-
-.card img {
+.cardesportes {
+  img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+ 
+  }
+  p {
+    font-size: 1.2rem;
+    background-color: #ccdbd3 ;
+    font-style:italic;
+    margin: 20px;
+  }
+
 }
 
-.card h2 {
-    padding: 15px;
-    font-size: 1.5rem;
-    background-color: rgba(73, 65, 65, 0.5);
+.cardesportes iframe{
+  width: 100%;
+  height: 60vh;
+  padding: 10px;
+  margin-top: 10px;
 }
 
-.card p {
-    padding: 0 15px 15px;
-    font-size: 1rem;
+
+/*formatação comercio local*/
+
+.comercios {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-iframe {
-    border: none;
-    display: block;
+.local {
+  background-color: whitesmoke;
+  border-left: 5px solid #111b52;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Container dos cards */
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    justify-items: center;
+.local h2 {
+  color: #000;
+  font-size: 1.5rem;
+  margin-top: 0;
 }
 
-/* Estilo dos cards */
-.card {
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 400px;
+.local img {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 6px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+.local p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
-/* Imagens dos cards */
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-/* Título dos cards */
-.card h2 {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    font-size: 1.5rem;
-}
-
-/* Texto dos cards */
-.card p {
-    padding: 15px;
-    font-size: 1rem;
-    color: #555;
-}
