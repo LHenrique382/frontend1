@@ -286,8 +286,7 @@ h2 {
 
 /* Estilo dos cards */
 .card {
-    
-    border-radius: 40px;
+  border-radius: 40px;
 }
 
 .card:hover {
